@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "5.1.2"
+gem "rails", "5.1.4"
 gem "pg", "~> 0.18"
 gem "puma"
 gem "sass-rails"
@@ -37,7 +37,7 @@ gem "local_time" # Client-side timezone rendering
 # gem "geocoder" # Convert addresses into lat/long
 # gem "whenever", require: false # Cron scheduling
 # gem "paper_trail" # Model auditing
-# gem "will_paginate"
+# gem "kaminari" # Pagination
 
 group :development, :test do
   gem "pry"
@@ -54,7 +54,7 @@ group :development do
   gem "foreman", require: false
   gem "rack-mini-profiler"
   gem "letter_opener"
-  gem "web-console", "~> 2.0"
+  gem "web-console"
   gem "listen", "~> 3.0.5"
   gem "colorize" # For colored spec/capybara output
   # gem "quiet_assets"

@@ -19,34 +19,33 @@ Style/StringLiterals:
     - double_quotes
 
 Metrics/ModuleLength:
-  Max: 110
+  Max: 100
   Exclude:
-    - "spec/controllers/users/buyers_requests_controller_spec.rb" # Just a spec file, it's fine.
+    - "spec/**/*"
 
 Metrics/ClassLength:
-  # Max: 150
-  Max: 300
+  Max: 150
 
 Metrics/LineLength:
-  Max: 250
+  Max: 150
 
 Metrics/MethodLength:
-  Max: 30
+  Max: 10
 
 Metrics/AbcSize:
-  Max: 75
+  Max: 25
   Exclude:
 
 Style/Documentation:
   Enabled: false
 
-Style/EmptyLinesAroundClassBody:
+Layout/EmptyLinesAroundClassBody:
   Enabled: false
 
-Style/EmptyLinesAroundMethodBody:
+Layout/EmptyLinesAroundMethodBody:
   Enabled: false
 
-Style/EmptyLinesAroundBlockBody:
+Layout/EmptyLinesAroundBlockBody:
   Enabled: false
 
 Style/GuardClause:
@@ -58,37 +57,37 @@ Style/IfUnlessModifier:
 Style/BlockComments:
   Enabled: false
 
-Style/AlignHash:
+Layout/AlignHash:
   Enabled: false
 
-Style/IndentHash:
+Layout/IndentHash:
   Enabled: false
 
-Style/IndentArray:
+Layout/IndentArray:
   Enabled: false
 
 Style/BracesAroundHashParameters:
   Enabled: false
 
-Style/ClosingParenthesisIndentation:
+Layout/ClosingParenthesisIndentation:
   Enabled: false
 
-Style/AlignArray:
+Layout/AlignArray:
   Enabled: false
 
 Style/AndOr:
   Enabled: false
 
-Style/AlignParameters:
+Layout/AlignParameters:
   Enabled: false
 
-Style/MultilineOperationIndentation:
+Layout/MultilineOperationIndentation:
   Enabled: false
 
 Style/WordArray:
   Enabled: false
 
-Style/EmptyLinesAroundModuleBody:
+Layout/EmptyLinesAroundModuleBody:
   Enabled: false
 
 Style/ConditionalAssignment:
@@ -122,7 +121,7 @@ Style/PercentLiteralDelimiters:
 Style/RegexpLiteral:
   Enabled: false
 
-Style/MultilineMethodCallIndentation:
+Layout/MultilineMethodCallIndentation:
   Enabled: false
 
 Bundler/OrderedGems:

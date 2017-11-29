@@ -7,11 +7,12 @@ that we don't need to discuss each choice that has been made in the past.
 ## Starting a new project using this template
 
 * Clone this project from Github
-  - git clone git@github.com:CKDev/greenfield-v3.git
+  - git clone git@github.com:CKDev/greenfield-v3.git <project name>
+* Update .ruby-version to latest ruby version
 * Create a new gemset with 'rvm gemset create <project name>'
 * Change .ruby-gemset for new project name
+* Run `gem install bundler`
 * Run `bundle install`
-* Copy secrets.yml.example to secrets.yml.
 * Create a new secret_key_base, one for development and one for test with `rake secret` and put in the secrets.yml file.
 * Find and replace all instances of "greenfield" throughout the app
 * Update the git remotes
@@ -71,7 +72,7 @@ Rubocop is used on this project, which defines the Ruby styling agreed upon for 
 
 ### JavaScript
 
-[Info on JavaScript testing/code standars and norms]
+[Info on JavaScript testing/code standards and norms]
 
 (E.g. from the Showami Project, replace with this project's norms)
 
@@ -79,7 +80,7 @@ At this time there is no JavaScript testing or linting, as there is simply not e
 
 ## Testing
 
-[Info on Rails testing/code standars and norms]
+[Info on Rails testing/code standards and norms]
 
 (E.g. from the Showami Project, replace with this project's norms)
 
