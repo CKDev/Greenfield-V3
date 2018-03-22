@@ -49,3 +49,6 @@ bower.json
 
 # Sublime files
 *.sublime-*
+
+# Jetbrains
+.idea/
