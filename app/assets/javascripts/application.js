@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require local_time
+//= require local-time
 //= require_tree .
