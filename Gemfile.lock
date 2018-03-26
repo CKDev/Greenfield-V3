@@ -164,6 +164,8 @@ GEM
     public_suffix (3.0.2)
     puma (3.11.3)
     rack (2.0.4)
+    rack-attack (5.1.0)
+      rack
     rack-mini-profiler (0.10.7)
       rack (>= 1.2.0)
     rack-protection (2.0.1)
@@ -325,6 +327,7 @@ DEPENDENCIES
   pry
   pry-byebug
   puma
+  rack-attack
   rack-mini-profiler
   rails (= 5.1.5)
   rails-controller-testing

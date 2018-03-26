@@ -39,6 +39,9 @@ gem "local_time" # Client-side timezone rendering
 # gem "paper_trail" # Model auditing
 # gem "kaminari" # Pagination
 
+# Prevent botspam and allow white/blacklisting IPs, etc
+gem "rack-attack"
+
 group :development, :test do
   gem "pry"
   gem "pry-byebug"
