@@ -64,7 +64,7 @@ group :development do
 end
 
 group :test do
-  gem "factory_girl_rails"
+  gem "factory_bot_rails"
   gem "rails-controller-testing"
   gem "capybara-webkit"
   gem "selenium-webdriver"
