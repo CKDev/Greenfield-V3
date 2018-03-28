@@ -55,7 +55,7 @@ class Rack::Attack
     # denied, but that's not very common and shouldn't happen to you. (Knock
     # on wood!)
     throttle("logins/email", limit: 5, period: 20.seconds) do |req|
-      if req.path == '/users_sign_in' && req.post?
+      if req.path == '/users/sign_in' && req.post?
         # return the email if present, nil otherwise
         req.params['email'].presence
       end
