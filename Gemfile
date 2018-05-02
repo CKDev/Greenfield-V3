@@ -42,6 +42,9 @@ gem "local_time" # Client-side timezone rendering
 # Prevent botspam and allow white/blacklisting IPs, etc
 gem "rack-attack"
 
+# Webpacker for modern JS
+gem 'webpacker', '~> 3.5'
+
 group :development, :test do
   gem "pry"
   gem "pry-byebug"
