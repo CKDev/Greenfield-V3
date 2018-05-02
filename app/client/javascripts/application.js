@@ -10,7 +10,8 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import GreenfieldApp from './containers/GreenfieldApp';
+import GreenfieldApp from './containers/GreenfieldApp/GreenfieldApp';
+import '../styles/global.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<GreenfieldApp/>, document.getElementById('main'));
