@@ -1,8 +1,11 @@
 import React from 'react';
 import Title from '../../Title/Title';
-import TextField from '../TextField/TextField';
 import Subtitle from '../../Subtitle/Subtitle';
+import TextField from '../Inputs/TextField/TextField';
+import RadioInput from '../Inputs/RadioInput/RadioInput';
 import FormInstructions from '../FormInstructions/FormInstructions';
+import TPRight from 'tp_right.png'
+import TPWrong from 'tp_wrong.png'
 
 export default class SignUpForm extends React.Component {
   url = '/users/sign_in';
@@ -22,6 +25,10 @@ export default class SignUpForm extends React.Component {
       that your name will be on a government watch list, and potentially added to the no-fly list. You can answer honestly
        knowing that there is no way your life will then spiral out of your control as a result of responding incorrectly. 
     `;
+  radioOptions = [
+    {label: TPWrong},
+    {label: TPRight}
+  ];
 
   render() {
     return (
@@ -38,7 +45,10 @@ export default class SignUpForm extends React.Component {
         <TextField
           label='Last Name'
         />
-
+        <RadioInput
+          label='Which of the following is correct?'
+          choices={this.radioOptions}
+        />
       </form>
     );
   }

@@ -1,0 +1,46 @@
+.RadioInput {
+  .choices {
+    @include flexbox(row, space-around, center);
+    margin-top: 50px;
+
+    .wrapper {
+      @include flexbox(row, center, center);
+      position: relative;
+
+      input {
+        display: none;
+
+        &:checked ~ .customButton:after {
+          background: #006992;
+        }
+      }
+
+      .customButton {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        display: block;
+        border: 2px solid #006992;
+        background: #ffffff;
+        margin-left: -160px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:after {
+          content: ' ';
+          width: 14px;
+          height: 14px;
+          border-radius: 50px;
+          position: absolute;
+          top: 2.4px;
+          left: 2.3px;
+          box-sizing: border-box;
+        }
+      }
+
+      img {
+        width: 200px;
+      }
+    }
+  }
+}
