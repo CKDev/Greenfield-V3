@@ -1,5 +1,5 @@
 import React from 'react';
-import TextExpander from '../TextExpander/TextExpander';
+import TextExpander from '../../TextExpander/TextExpander';
 import './FormInstructions.scss';
 
 export default class FormInstructions extends React.Component {

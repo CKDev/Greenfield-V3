@@ -1,11 +1,14 @@
 import React from 'react';
-import Title from '../Title/Title';
+import Title from '../../Title/Title';
 import TextField from '../TextField/TextField';
-import Subtitle from '../Subtitle/Subtitle';
+import Subtitle from '../../Subtitle/Subtitle';
 import FormInstructions from '../FormInstructions/FormInstructions';
 
 export default class SignUpForm extends React.Component {
   url = '/users/sign_in';
+  title = 'This is a form.';
+  subtitle = 'Fill it out.';
+  instructionsHeading = 'Which are you?';
   formInstructionsText =
     `There are two types of people in this world: people who are right, and people who are wrong. To find out where 
       you rank in this, please fill out the following. There is a correct answer to all of the following. I expect that 
@@ -23,13 +26,19 @@ export default class SignUpForm extends React.Component {
   render() {
     return (
       <form action={ this.url } method='POST'>
-        <Title text='This is a form.'/>
-        <Subtitle text='Fill it out.'/>
+        <Title text={this.title}/>
+        <Subtitle text={this.subtitle}/>
         <FormInstructions
-          heading='Which are you?'
+          heading={this.instructionsHeading}
           body={ this.formInstructionsText }
         />
-        <TextField/>
+        <TextField
+          label='First Name'
+        />
+        <TextField
+          label='Last Name'
+        />
+
       </form>
     );
   }

@@ -4,7 +4,10 @@ import './TextField.scss';
 export default class SignUpForm extends React.Component {
   render() {
     return (
-      <input type="text" className="TextField"/>
+      <div className='TextField'>
+        <label>{this.props.label}</label>
+        <input type="text" />
+      </div>
     )
   }
 }
