@@ -8,11 +8,18 @@
 // layout file, like app/views/layouts/application.html.erb
 
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider, connect } from "react-redux";
+import store from "./store/index";
 import GreenfieldApp from './containers/GreenfieldApp/GreenfieldApp';
 import '../styles/global.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<GreenfieldApp/>, document.getElementById('main'));
+  ReactDOM.render(
+    <Provider store={ store }>
+      <GreenfieldApp/>
+    </Provider>,
+    document.getElementById('main'));
 });
+

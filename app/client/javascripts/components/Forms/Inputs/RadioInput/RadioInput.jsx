@@ -1,4 +1,6 @@
 import React from 'react';
+import store from '../../../../store/index';
+import { checkRadio } from '../../../../actions/CheckRadio';
 import './RadioInput.scss';
 
 export default class RadioInput extends React.Component {
@@ -10,9 +12,7 @@ export default class RadioInput extends React.Component {
   }
 
   checkButton(e) {
-    this.setState({
-      checked: e.target.id
-    });
+    store.dispatch(checkRadio(e.target.id));
   }
 
   render() {
@@ -26,7 +26,7 @@ export default class RadioInput extends React.Component {
                 type='radio'
                 value={ choice.value }
                 name='choice'
-                checked={ this.state.checked === i.toString() ? 'checked' : '' }
+                checked={ store.getState().checked === i.toString() ? 'checked' : '' }
               />
               <span className='customButton' id={ i } onClick={ this.checkButton }/>
               <img src={ choice.label }/>
