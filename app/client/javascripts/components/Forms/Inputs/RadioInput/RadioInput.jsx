@@ -9,10 +9,10 @@ export default class RadioInput extends React.Component {
     this.checkButton = this.checkButton.bind(this);
   }
 
-  checkButton (e) {
+  checkButton(e) {
     this.setState({
       checked: e.target.id
-    })
+    });
   }
 
   render() {
@@ -21,9 +21,14 @@ export default class RadioInput extends React.Component {
         <label className='label'>{ this.props.label }</label>
         <div className='choices'>
           { this.props.choices.map((choice, i) =>
-            <label key={i} className='wrapper'>
-              <input type='radio' checked={this.state.checked === i.toString() ? 'checked' : ''}/>
-              <span className='customButton' id={i} onClick={this.checkButton}/>
+            <label key={ i } className='wrapper'>
+              <input
+                type='radio'
+                value={ choice.value }
+                name='choice'
+                checked={ this.state.checked === i.toString() ? 'checked' : '' }
+              />
+              <span className='customButton' id={ i } onClick={ this.checkButton }/>
               <img src={ choice.label }/>
             </label>
           ) }

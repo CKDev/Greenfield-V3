@@ -24,7 +24,6 @@ h6 {
   padding: 0;
 }
 
-
 ul,
 ol,
 dl {
@@ -39,4 +38,15 @@ a {
 
 label {
   font-size: 20px;
+}
+
+form {
+  .form-group {
+    margin-bottom: 26px;
+  }
+
+  .actions {
+    @include flexbox(row, space-around, center);
+    margin-top: 45px;
+  }
 }

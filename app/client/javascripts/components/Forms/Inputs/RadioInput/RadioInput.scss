@@ -1,4 +1,6 @@
 .RadioInput {
+  padding-top: 20px;
+
   .choices {
     @include flexbox(row, space-around, center);
     margin-top: 50px;
@@ -11,7 +13,7 @@
         display: none;
 
         &:checked ~ .customButton:after {
-          background: #006992;
+          background: $blue;
         }
       }
 
@@ -20,8 +22,8 @@
         width: 18px;
         height: 18px;
         display: block;
-        border: 2px solid #006992;
-        background: #ffffff;
+        border: 2px solid $input-border;
+        background: $white;
         margin-left: -160px;
         border-radius: 50%;
         cursor: pointer;

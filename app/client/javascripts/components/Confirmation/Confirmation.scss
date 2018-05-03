@@ -1,0 +1,26 @@
+.Confirmation {
+  @include flexbox(column, space-between, center);
+  margin: 100px auto;
+
+  p {
+    font-size: 48px;
+
+    span {
+      font-weight: bold;
+      font-family: 'Oleo Script Swash Caps', sans-serif;
+
+      &.right {
+
+        color: $blue;
+      }
+
+      &.wrong {
+        color: $red;
+      }
+    }
+  }
+
+  img {
+    border-radius: 50%;
+  }
+}

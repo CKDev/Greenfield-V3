@@ -1,14 +1,21 @@
 import React from 'react';
 import Title from '../../Title/Title';
 import Subtitle from '../../Subtitle/Subtitle';
+import FormInstructions from '../FormInstructions/FormInstructions';
 import TextField from '../Inputs/TextField/TextField';
 import RadioInput from '../Inputs/RadioInput/RadioInput';
-import FormInstructions from '../FormInstructions/FormInstructions';
-import TPRight from 'tp_right.png'
-import TPWrong from 'tp_wrong.png'
+import Submit from '../Inputs/Submit/Submit';
+import TPRight from 'tp_right.png';
+import TPWrong from 'tp_wrong.png';
+import './Form';
 
-export default class SignUpForm extends React.Component {
-  url = '/users/sign_in';
+export default class Form extends React.Component {
+  constructor(props) {
+    super(props);
+    this.submitForm = this.submitForm.bind(this);
+  }
+
+  url = '';
   title = 'This is a form.';
   subtitle = 'Fill it out.';
   instructionsHeading = 'Which are you?';
@@ -26,29 +33,49 @@ export default class SignUpForm extends React.Component {
        knowing that there is no way your life will then spiral out of your control as a result of responding incorrectly. 
     `;
   radioOptions = [
-    {label: TPWrong},
-    {label: TPRight}
+    {label: TPWrong, value: 'wrong'},
+    {label: TPRight, value: 'right'}
   ];
+
+
+  submitForm(e) {
+    e.preventDefault();
+    let data = new FormData(e.target);
+    this.props.onSubmit(data);
+  }
 
   render() {
     return (
-      <form action={ this.url } method='POST'>
-        <Title text={this.title}/>
-        <Subtitle text={this.subtitle}/>
+      <form action={ this.url } method='POST' className='Form' onSubmit={this.submitForm}>
+        <Title text={ this.title }/>
+        <Subtitle text={ this.subtitle }/>
         <FormInstructions
-          heading={this.instructionsHeading}
+          heading={ this.instructionsHeading }
           body={ this.formInstructionsText }
         />
-        <TextField
-          label='First Name'
-        />
-        <TextField
-          label='Last Name'
-        />
-        <RadioInput
-          label='Which of the following is correct?'
-          choices={this.radioOptions}
-        />
+        <div className='form-group'>
+          <TextField
+            label='First Name'
+            name='first_name'
+          />
+        </div>
+        <div className='form-group'>
+          <TextField
+            label='Last Name'
+            name='last_name'
+          />
+        </div>
+        <div className='form-group'>
+          <RadioInput
+            label='Which of the following is correct?'
+            choices={ this.radioOptions }
+          />
+        </div>
+        <div className='actions'>
+          <Submit
+            text='submit'
+          />
+        </div>
       </form>
     );
   }

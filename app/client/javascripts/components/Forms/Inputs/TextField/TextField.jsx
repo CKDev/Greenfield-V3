@@ -5,9 +5,12 @@ export default class SignUpForm extends React.Component {
   render() {
     return (
       <div className='TextField'>
-        <label>{this.props.label}</label>
-        <input type="text" />
+        <label>{ this.props.label }</label>
+        <input
+          type="text"
+          name={ this.props.name }
+        />
       </div>
-    )
+    );
   }
 }
