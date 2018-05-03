@@ -15,6 +15,7 @@ export default class GreenfieldApp extends React.Component {
       submitted: true,
       data: data
     })
+    window.scrollTo(0, 0)
   }
 
   render() {
