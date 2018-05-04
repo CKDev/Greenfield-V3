@@ -82,12 +82,12 @@ end
 
 # Capistrano Deployment
 group :development, :deployment do
-  gem "capistrano", "3.4.0", require: false # Deploy is locked to this version.
-  gem "capistrano-rails", "~> 1.1.3", require: false
-  gem "capistrano-rvm", require: false
-  gem "capistrano-faster-assets", "~> 1.0", require: false
-  gem "capistrano-db-tasks", "~> 0.4", require: false
-  gem "capistrano3-puma",   require: false
-  gem "capistrano-bundler", require: false
+  # gem "capistrano", "3.4.0", require: false # Deploy is locked to this version.
+  # gem "capistrano-rails", "~> 1.1.3", require: false
+  # gem "capistrano-rvm", require: false
+  # gem "capistrano-faster-assets", "~> 1.0", require: false
+  # gem "capistrano-db-tasks", "~> 0.4", require: false
+  # gem "capistrano3-puma",   require: false
+  # gem "capistrano-bundler", require: false
   # gem "capistrano-sidekiq", require: false
 end
