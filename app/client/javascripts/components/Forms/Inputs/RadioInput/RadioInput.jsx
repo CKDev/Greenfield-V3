@@ -7,7 +7,6 @@ export default class RadioInput extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {checked: ''};
     this.checkButton = this.checkButton.bind(this);
   }
 

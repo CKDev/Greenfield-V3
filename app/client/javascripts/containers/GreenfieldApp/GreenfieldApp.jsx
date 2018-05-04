@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
+import { submitForm } from "../../actions/SumbitForm";
+import store from "../../store";
 import Form from '../../components/Forms/Form/Form';
 import Confirmation from '../../components/Confirmation/Confirmation';
 import './GreenfieldApp.scss';
@@ -7,28 +9,29 @@ import './GreenfieldApp.scss';
 class GreenfieldApp extends React.Component {
   constructor(props) {
     super(props);
-    this.submitForm = this.submitForm.bind(this);
-    this.state = {};
+    this.submit = this.submit.bind(this);
   }
 
 
-  submitForm(data) {
-    this.setState({
-      submitted: true,
-      data: data
-    });
+  submit(data) {
+    store.dispatch(submitForm(
+      {
+        formSubmitted: true,
+        formData: data
+      }
+    ));
     window.scrollTo(0, 0);
   }
 
   render() {
     return (
       <div className='GreenfieldApp'>
-        { this.state.submitted ? (
+        { store.getState().formSubmitted ? (
           <Confirmation
-            data={ this.state.data }
+            data={ store.getState().formData }
           />
         ) : (
-          <Form onSubmit={ this.submitForm }/>
+          <Form onSubmit={ this.submit }/>
         ) }
       </div>
     );
