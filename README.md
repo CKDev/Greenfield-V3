@@ -1,42 +1,14 @@
-# Greenfield (V3) Starter Project
+# Nico API
 
-The purpose of this project is to speed up initializing a new Rails
-project.  Our agreed upon list of Rails gems and settings are included so
-that we don't need to discuss each choice that has been made in the past.
-
-## Starting a new project using this template
-
-* Clone this project from Github
-  - git clone git@github.com:CKDev/greenfield-v3.git <project name>
-* Update .ruby-version to latest ruby version
-* Create a new gemset with 'rvm gemset create <project name>'
-* Change .ruby-gemset for new project name
-* Run `gem install bundler`
-* Run `bundle install`
-* Create a new secret_key_base, one for development and one for test with `rake secret` and put in the secrets.yml file.
-* Find and replace all instances of "greenfield" throughout the app
-* Update the git remotes
-  * `git remote -v` (should still point to greenfield)
-  * `git remote rm origin`
-  * `git remote add origin git@github.com:<new repo>`
-* Create configure the database
-  * Run `rake db:create db:migrate db:seed`
-* Configure Redis - TODO:
-* Configure Sidekiq - TODO:
-
-## Replace this README with application specific information below.
-
-# Greenfield
-
-## Running Greenfield Locally
+## Running Locally
 
 ### Ruby Version
 
-2.4.1
+2.5.1
 
 ### Rails Version
 
-5.1.2
+5.2.0
 
 ### System dependencies
 
@@ -69,14 +41,6 @@ The purpose of this section is to layout the norms of this project.  Future deve
 ### Ruby
 
 Rubocop is used on this project, which defines the Ruby styling agreed upon for this project.  The rules are bendable, but a best effort should be made to stay within the rubocop checks.  At the time of MVP, the Rubocop checks all passed.
-
-### JavaScript
-
-[Info on JavaScript testing/code standards and norms]
-
-(E.g. from the Showami Project, replace with this project's norms)
-
-At this time there is no JavaScript testing or linting, as there is simply not enough JS code in the app to justify the effort. This should be reassessed over time.
 
 ## Testing
 
