@@ -1,15 +1,9 @@
 source "https://rubygems.org"
 
-gem "rails", "5.1.5"
+gem "rails", "5.2.0"
 gem "pg", "~> 0.18"
 gem "puma"
-gem "sass-rails"
-gem "coffee-rails"
-gem "uglifier", ">= 1.3.0"
-gem "jquery-rails"
 
-# Use Redis adapter to run Action Cable in production
-gem "redis", "~> 3.0"
 gem "redis-namespace"
 
 # Authentication and authorization
@@ -27,8 +21,6 @@ gem "devise"
 # gem "skylight"
 
 # File uploads to S3
-# gem "carrierwave"
-# gem "fog-aws"
 # gem "mini_magick"
 # gem "file_validators" # For image validation
 
